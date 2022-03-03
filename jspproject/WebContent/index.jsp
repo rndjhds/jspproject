@@ -8,7 +8,9 @@
 </head>
 <body>
 
-처음 작성하는 JSP 프로그램
+처음 작성하는 JSP 프로그램	<br>
 
+application 공유값 : <%=application.getAttribute("test") %>	<br>
+session 공유 값 : <%=session.getAttribute("email") %> <!-- null값 출력 다른 폴더까지는 공유 안됨 -->
 </body>
 </html>
