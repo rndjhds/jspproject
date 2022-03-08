@@ -38,7 +38,7 @@
 				location.href="selectTest.jsp";
 	    	</script>
 <%	    
-	   }else{
+	   }else{	// 비번 불일치시 
 %>
 		  <script>
 		  	alert("비밀번호가 틀렸습니다.");

@@ -7,11 +7,11 @@
   String id= request.getParameter("id");
   String passwd= request.getParameter("passwd");
   String name= request.getParameter("name");
-  Timestamp register=new Timestamp(System.currentTimeMillis());
+//  Timestamp register=new Timestamp(System.currentTimeMillis());
 
   Connection conn=null;
   PreparedStatement pstmt=null;
-  int result = 0;
+  int result = 0;	// int형으로 반환하기 때문에 int형으로 받은
   
   try{
 	String jdbcUrl="jdbc:oracle:thin:@localhost:1521:xe";
@@ -23,12 +23,13 @@
 	conn=DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
 	
 	String sql= "insert into member1 values (?,?,?,sysdate)";
+//	String sql= "insert into member1 values (?,?,?,?)";
 	pstmt=conn.prepareStatement(sql);
 	pstmt.setString(1,id);
     pstmt.setString(2,passwd);
 	pstmt.setString(3,name);
 //	pstmt.setTimestamp(4,register);
-	result = pstmt.executeUpdate();
+	result = pstmt.executeUpdate();	// SQL문 실행
 
 	}catch(Exception e){ 
 		e.printStackTrace();

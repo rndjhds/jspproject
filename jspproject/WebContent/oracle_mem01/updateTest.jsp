@@ -28,7 +28,7 @@
 	if(rs.next()){ // id가 있으면
 		String rId=rs.getString("id");
 		String rPasswd=rs.getString("passwd");
-      if(id.equals(rId) && passwd.equals(rPasswd)){
+      if(id.equals(rId) && passwd.equals(rPasswd)){	// 비번 일치시
 	    sql= "update member1 set name= ?, reg_date=sysdate  where id= ? ";
 	    pstmt=conn.prepareStatement(sql);
 	    pstmt.setString(1,name);
