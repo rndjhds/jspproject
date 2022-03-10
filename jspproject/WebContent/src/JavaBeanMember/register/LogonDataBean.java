@@ -5,7 +5,7 @@ package JavaBeanMember.register;
 import java.util.Date;
 
 public class LogonDataBean {
-	private String id;
+	private String id;	// 프로퍼티(property)
 	private String passwd;
 	private String name;
 	private String jumin1;
